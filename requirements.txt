@@ -8,12 +8,25 @@ pyyaml==3.13
 trafaret-config==2.0.2
 trafaret==1.2.0
 
-# Packages that will pull vulnerable transitive dependencies
-requests==2.20.0
-cryptography==2.3
-paramiko==2.4.0
-flask==1.0.0
-django==2.0.0
-celery==4.2.0
-pillow==5.0.0
-lxml==4.2.0
+# Packages with TRANSITIVE vulnerable dependencies
+
+# requests 2.25.0 pulls vulnerable urllib3<1.26.5, certifi
+requests==2.25.0
+
+# cryptography 3.4.0 pulls vulnerable cffi
+cryptography==3.4.0
+
+# paramiko 2.7.0 pulls vulnerable cryptography, bcrypt
+paramiko==2.7.0
+
+# flask 1.1.0 pulls vulnerable Werkzeug<2.0, itsdangerous<2.0, Jinja2<3.0
+flask==1.1.0
+
+# pillow 8.0.0 has known CVEs
+pillow==8.0.0
+
+# lxml 4.6.0 has known CVEs in libxml2 bindings
+lxml==4.6.0
+
+# httpx 0.18.0 pulls vulnerable httpcore, h11
+httpx==0.18.0
