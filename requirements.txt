@@ -30,3 +30,20 @@ lxml==4.6.0
 
 # httpx 0.18.0 pulls vulnerable httpcore, h11
 httpx==0.18.0
+
+# Additional packages with known CVEs
+
+# django 2.2.0 has multiple CVEs (SQLi, XSS, directory traversal)
+django==2.2.0
+
+# pyjwt 1.7.0 has CVE-2022-29217 (algorithm confusion)
+pyjwt==1.7.0
+
+# jinja2 2.10 has sandbox escape CVEs
+jinja2==2.10
+
+# urllib3 1.25.0 has CRLF injection and multiple CVEs
+urllib3==1.25.0
+
+# setuptools 39.0.0 has RCE CVE
+setuptools==39.0.0
